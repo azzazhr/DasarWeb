@@ -24,12 +24,12 @@ img {
     font-style: italic;
 }
 
+h2 {
+    text-decoration: underline;
+}
+
 p {
     text-align: left;
     font-weight: bold;
     font-size: 25px;
-}
-
-h2 {
-    text-decoration: underline;
 }
