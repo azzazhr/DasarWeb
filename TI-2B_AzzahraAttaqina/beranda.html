@@ -3,17 +3,21 @@
 
 <head>
     <title>Beranda</title>
-    <link rel="stylesheet" href="styleIndex.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styleBeranda.css">
+    <script src="script.js" defer></script> <!-- Menyertakan JavaScript -->
 </head>
 
 <body>
     <header>
-        <h1>Selamat Datang di Website Pribadi Saya</h1>
+        <h1 id="welcome-message">Selamat Datang di Website Pribadi Saya</h1>
     </header>
     <nav>
         <ul>
             <li><a href="beranda.html">Beranda</a></li>
-            <li><a href="about.html">Tentang Saya</a></li>
+            <li><a href="tentangSaya.html
+                ">Tentang Saya</a></li>
+            <li><a href="#" onclick="konfirmasiHobi()">Hobi Saya</a></li>
             <li><a href="kontak.html">Kontak</a></li>
         </ul>
     </nav>
@@ -24,11 +28,22 @@
             <p>Halo! Nama saya Azzahra Attaqina, dan ini adalah situs pribadi saya. Saya suka belajar tentang teknologi
                 web
                 dan berbagi pengetahuan saya dengan orang lain.</p>
+
         </section>
     </main>
     <footer>
         <p>© 2024 Azzahra Attaqina. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Fungsi untuk konfirmasi sebelum masuk ke halaman hobi
+        function konfirmasiHobi() {
+            var result = confirm("Apakah anda yakin untuk lanjut melihat hobi saya?");
+            if (result) {
+                window.location.href = "hobi.html";
+            }
+        }
+    </script>
 </body>
 
 </html>

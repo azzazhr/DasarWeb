@@ -78,3 +78,15 @@ footer {
     position: fixed;
     width: 100%;
 }
+
+html,
+body {
+    height: 100%;
+    /* Membuat body dan html mengambil tinggi penuh */
+    margin: 0;
+    /* Menghilangkan margin default */
+    display: flex;
+    /* Menggunakan flexbox */
+    flex-direction: column;
+    /* Mengatur arah menjadi kolom */
+}

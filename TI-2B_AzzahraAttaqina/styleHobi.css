@@ -32,6 +32,7 @@ nav ul li a:hover {
 
 main {
     margin: 20px;
+    flex: 1;
 }
 
 ul {
@@ -62,11 +63,29 @@ p {
     font-size: 30px;
 }
 
+.hobi-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.hobi-item p {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #555;
+    font-weight: bold;
+}
+
+.hobi-item img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+}
+
 footer {
     background-color: #eaacac;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
 }

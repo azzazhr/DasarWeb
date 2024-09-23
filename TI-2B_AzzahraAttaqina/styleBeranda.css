@@ -10,9 +10,14 @@ header {
     text-align: center;
 }
 
+img {
+    width: 400px;
+    border-radius: 50%;
+    border: 5px solid #333;
+}
+
 nav ul {
     background-color: #c34b4b;
-    list-style: none;
     text-align: center;
 }
 
@@ -34,31 +39,16 @@ main {
     margin: 20px;
 }
 
-ul {
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-    font-size: 30px;
-}
-
-ul li a {
-    color: #007bff;
-}
-
-ul li a:hover {
-    text-decoration: underline;
-}
-
 h1,
-h2 {
+h2,
+h3 {
     color: #333;
     font-size: 40px;
 }
 
 p {
-    color: #333;
+    line-height: 1.6;
+    color: #666;
     font-size: 30px;
 }
 
