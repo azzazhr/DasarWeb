@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Toko Online</title>
+    <link rel="stylesheet" href="styleProduk.css">
+</head>
+
+<body>
+    <header>
+        <h1>Kontak Toko Kami</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#" onclick="konfirmasiProduk()">Produk</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Hubungi Saya</h2>
+        <p>Jika Anda ingin menghubungi toko saya, silakan menggunakan informasi kontak di bawah ini:</p>
+        <ul>
+            <li>Email: <a href="mailto:azzastore@gmail.com">azzastore123@gmail.com</a></li>
+            <li>Telepon: +62 822-6465-1009</li>
+            <li>Alamat: Jl. Semangka no 115</li>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Azza's Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function konfirmasiProduk() {
+            var result = confirm("Apakah anda yakin untuk lanjut melihat produk toko kami?");
+            if (result) {
+                window.location.href = "produk.html";
+            }
+        }
+    </script>
+</body>
+
+</html>

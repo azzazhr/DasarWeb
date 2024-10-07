@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Toko Online</title>
+    <link rel="stylesheet" href="styleProduk.css">
+</head>
+
+<body>
+    <header>
+        <h1>Azza's Store</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#" onclick="konfirmasiProduk()">Produk</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Selamat Datang di Toko Online Kami</h2>
+        <p>Temukan berbagai produk terbaik dengan harga terjangkau!</p>
+    </section>
+
+    <section id="products">
+        <h2>Produk Terbaru</h2>
+        <div class="product">
+            <img src="img/produk-antidarkspotset.jpg" alt="Anti Dark Spot Set">
+            <h3>Anti Dark Spot Set</h3>
+            <p>Harga: Rp 354.000</p>
+            <button onclick="addToCart('Anti Darks Spot Set')">Beli</button>
+        </div>
+        <div class="product">
+            <img src="img/produk-glowingset.jpeg" alt="Glowing Set">
+            <h3>Glowing Set</h3>
+            <p>Harga: Rp 360.000</p>
+            <button onclick="addToCart('Glowing Set')">Beli</button>
+        </div>
+        <div class="product">
+            <img src="img/produk-brighteningtravelkit.jpeg" alt="Brightening Travel Kit">
+            <h3>Brightening Travel</h3>
+            <p>Harga: Rp 486.000</p>
+            <button onclick="addToCart('Brightening Travel Kit')">Beli</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Azza's Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function addToCart(product) {
+            const confirmation = confirm(`Apakah Anda ingin membeli ${product}?`);
+            if (confirmation) {
+                alert(`${product} telah ditambahkan ke keranjang!`);
+            }
+        }
+    </script>
+</body>
+
+</html>

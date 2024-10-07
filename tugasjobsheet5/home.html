@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Toko Online</title>
+    <link rel="stylesheet" href="styleHome.css">
+    <script>
+        window.onload = function () {
+            alert('Selamat datang di Toko Online Kami!');
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Azza's Store</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#" onclick="konfirmasiProduk()">Produk</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Selamat Datang di Toko Online Kami</h2>
+        <p>Toko Online Kami adalah platform terpercaya yang menyediakan berbagai kebutuhan skincare. Dengan pengalaman
+            lebih dari 5 tahun di dunia e-commerce, kami
+            berkomitmen untuk memberikan pelayanan terbaik kepada pelanggan kami.</p>
+        <p>Misi kami adalah menjadi pilihan utama masyarakat Indonesia dalam berbelanja online dengan menghadirkan
+            produk berkualitas, layanan pelanggan yang responsif, serta pengiriman cepat ke seluruh penjuru tanah air.
+        </p>
+        <p>Kami selalu memastikan bahwa produk yang kami tawarkan adalah asli dan memiliki kualitas terbaik. Kami juga
+            memberikan promo dan diskon menarik secara berkala sebagai bentuk apresiasi kepada pelanggan setia kami.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Azza's Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function konfirmasiProduk() {
+            var result = confirm("Apakah anda yakin untuk lanjut melihat produk toko kami?");
+            if (result) {
+                window.location.href = "produk.html";
+            }
+        }
+    </script>
+</body>
+
+</html>
