@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Kontak</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .success {
+            color: green;
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Formulir</h2>
+    <form id="contactForm" method="post" action="send_email.php">
+        <label for="name">Nama Lengkap:</label>
+        <input type="text" id="name" name="name">
+        <span class="error" id="name-error"></span><br><br>
+
+        <label for="email">Alamat Email:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="email-error"></span><br><br>
+
+        <label for="subject">Subjek:</label>
+        <input type="text" id="subject" name="subject">
+        <span class="error" id="subject-error"></span><br><br>
+
+        <label for="message">Pesan:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <span class="error" id="message-error"></span><br><br>
+
+        <input type="submit" value="Kirim">
+        <div class="success" id="success-message"></div>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $("#contactForm").submit(function (event) {
+                var valid = true;
+                $("#success-message").text(""); // Reset success message
+
+                // Validasi Nama Lengkap
+                var name = $("#name").val();
+                if (name.length < 3) {
+                    $("#name-error").text("Nama lengkap minimal 3 karakter.");
+                    valid = false;
+                } else {
+                    $("#name-error").text("");
+                }
+
+                // Validasi Alamat Email
+                var email = $("#email").val();
+                var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if (!emailPattern.test(email)) {
+                    $("#email-error").text("Alamat email tidak valid.");
+                    valid = false;
+                } else {
+                    $("#email-error").text("");
+                }
+
+                // Validasi Subjek
+                var subject = $("#subject").val();
+                if (subject.trim() === "") {
+                    $("#subject-error").text("Subjek tidak boleh kosong.");
+                    valid = false;
+                } else {
+                    $("#subject-error").text("");
+                }
+
+                // Validasi Pesan
+                var message = $("#message").val();
+                if (message.trim() === "") {
+                    $("#message-error").text("Pesan tidak boleh kosong.");
+                    valid = false;
+                } else {
+                    $("#message-error").text("");
+                }
+
+                // Jika tidak valid, batalkan pengiriman formulir
+                if (!valid) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
